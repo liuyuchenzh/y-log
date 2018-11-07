@@ -12,19 +12,24 @@ const log = {
   }
 };
 
+// print multi input
+const loopLog = (...input: any[]) => {
+  for (let i = 0; i < input.length; i++) {
+    log.log(input[i].toString());
+  }
+};
+
 // compatible with console.log
 if (!window.console) {
   // @ts-ignore
   window.console = {
-    log
+    log: loopLog
   };
 } else {
   const standardLog = window.console.log;
   window.console.log = (...input: any[]) => {
     standardLog(...input);
-    for (let i = 0; i < input.length; i++) {
-      log.log(input.toString());
-    }
+    loopLog(...input);
   };
 }
 
