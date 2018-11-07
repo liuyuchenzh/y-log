@@ -12,7 +12,8 @@
   },
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "clean": "microbundle --no-compress"
   },
   "homepage": "https://github.com/liuyuchenzh/y-log",
   "bugs": {

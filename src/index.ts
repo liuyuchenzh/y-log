@@ -13,11 +13,11 @@ const log = {
 };
 
 // print multi input
-const loopLog = (...input: any[]) => {
+function loopLog(...input: any[]) {
   for (let i = 0; i < input.length; i++) {
     log.log(input[i].toString());
   }
-};
+}
 
 // compatible with console.log
 if (!window.console) {
@@ -27,8 +27,8 @@ if (!window.console) {
   };
 } else {
   const standardLog = window.console.log;
-  window.console.log = (...input: any[]) => {
-    standardLog(...input);
+  window.console.log = function(...input: any[]) {
+    standardLog.call(window.console, ...input);
     loopLog(...input);
   };
 }
