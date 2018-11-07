@@ -13,5 +13,13 @@
   "scripts": {
     "build": "microbundle",
     "dev": "microbundle watch"
+  },
+  "homepage": "https://github.com/liuyuchenzh/y-log",
+  "bugs": {
+    "url": "https://github.com/liuyuchenzh/y-log/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuyuchenzh/y-log.git"
   }
 }
