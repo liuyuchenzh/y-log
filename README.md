@@ -24,7 +24,7 @@ import "y-console";
 console.log("This also works");
 ```
 
-> If no bundling tool (`webpack`, `parcel` etc) is available for your workflow, just include [this](./dist/index.js) to the your html file, and use `console.log` as usual.
+> If no bundling tool (`webpack`, `parcel` etc) is available for your workflow, just include [this](./dist/index.umd.js) to the your html file, and use `console.log` as usual.
 
 ## API
 
