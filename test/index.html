@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <title>@y/log</title>
+</head>
+
+<body>
+  <script type="module">
+    import log from "../dist/index.mjs";
+    log.log("This works");
+    const obj = {
+      foo: "foo",
+      bar: "bar",
+      obj: {
+        foo: "foo",
+        bar: "bar"
+      }
+    };
+    log.log(JSON.stringify(obj, null, 2));
+    console.log("This also works");
+  </script>
+</body>
+
+</html>

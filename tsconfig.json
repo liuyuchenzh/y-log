@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "target": "es3",
+    "module": "esnext",
+    "lib": ["dom", "es2018"],
+    "strict": true,
+    "esModuleInterop": true
+  }
+}
