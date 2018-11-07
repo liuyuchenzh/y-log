@@ -9,18 +9,18 @@ Targeting ancient IE (6+) and desktop webview.
 ## Installation
 
 ```bash
-npm i -D @y/log
+npm i -D y-console
 # or
-yarn add -D @y/log
+yarn add -D y-console
 ```
 
 ## Usage
 
 ```js
-import log from "@y/log";
+import log from "y-console";
 log.log("This works");
 // or
-import "@y/log";
+import "y-console";
 console.log("This also works");
 ```
 
