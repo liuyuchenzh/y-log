@@ -1,4 +1,4 @@
-import { init, printOut, UID } from "./util/pre";
+import { init, printOut, UID } from "./util/log";
 const cache = {
   init: false
 };

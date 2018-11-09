@@ -32,20 +32,20 @@ const init = (): void => {
   document.body.insertBefore(container, firstChild);
 };
 
-const makePre = (): HTMLPreElement => {
-  const pre: HTMLPreElement = document.createElement("pre");
-  pre.style.cssText = `
+const makeLog = (tag: keyof HTMLElementTagNameMap = "pre"): HTMLElement => {
+  const log: HTMLElement = document.createElement(tag);
+  log.style.cssText = `
     color: #fff;
     font-size: 14px;
     line-height: 1.4;
     padding: 2px 10px;
   `;
-  return pre;
+  return log;
 };
 
 const printOut = (input: string, safeMode: boolean = false) => {
-  const pre: HTMLPreElement = makePre();
-  pre.innerHTML = input;
+  const log: HTMLElement = makeLog();
+  log.innerText = input;
   if (safeMode) {
     const container = document.getElementById(UID);
     if (!container) {
@@ -53,7 +53,7 @@ const printOut = (input: string, safeMode: boolean = false) => {
     }
   }
   if (cache.container) {
-    cache.container.appendChild(pre);
+    cache.container.appendChild(log);
   }
 };
 
