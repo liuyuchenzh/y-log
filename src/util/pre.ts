@@ -1,4 +1,4 @@
-const UID: string = `log${new Date().getTime()}`;
+export const UID: string = `log${new Date().getTime()}`;
 interface Cache {
   container?: HTMLElement;
 }

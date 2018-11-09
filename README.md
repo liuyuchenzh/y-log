@@ -44,3 +44,11 @@ log.log("string", true);
 ```
 
 If set `safeMode` to `true`, then we will make sure the container (`<div />`) of the log exists, or one will be created.
+
+### `id`
+
+The id property of the log container
+
+```html
+<div id="id"></div>
+```

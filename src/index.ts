@@ -1,8 +1,9 @@
-import { init, printOut } from "./util/pre";
+import { init, printOut, UID } from "./util/pre";
 const cache = {
   init: false
 };
 const log = {
+  id: UID,
   log: (input: string, safeMode: boolean = false): void => {
     if (!cache.init) {
       init();
@@ -15,7 +16,11 @@ const log = {
 // print multi input
 function loopLog(...input: any[]) {
   for (let i = 0; i < input.length; i++) {
-    log.log(input[i].toString());
+    try {
+      log.log(input[i].toString());
+    } catch (e) {
+      log.log(`${input[i]}`);
+    }
   }
 }
 
