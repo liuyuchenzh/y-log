@@ -33,7 +33,7 @@ console.log("This also works");
 Interface
 
 ```ts
-log.log = (input: string, safeMode: boolean = false, tag: string = "pre") => void
+log.log = (input: string, safeMode: boolean = false) => void
 ```
 
 Usage
