@@ -33,7 +33,11 @@ if (!window.console) {
 } else {
   const standardLog = window.console.log;
   window.console.log = function(...input: any[]) {
-    standardLog.call(window.console, ...input);
+    try {
+      standardLog(...input);
+    } catch(e) {
+      // ignore
+    }
     loopLog(...input);
   };
 }
