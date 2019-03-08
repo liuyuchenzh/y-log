@@ -1,5 +1,7 @@
 # yLog
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/liuyuchenzh/y-log.svg)](https://greenkeeper.io/)
+
 This is a simplified version of [`min-log`](https://github.com/chunpu/min-log) with `log.setOutputer('browser_html')` setup (But slightly different)
 
 Targeting ancient IE (6+) and desktop webview.
